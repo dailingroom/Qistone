@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/renamelen"
+        >
+        <ImageView
+            android:id="@+id/resigner_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back"
+            android:clickable="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/head_account"
+        android:layout_below="@+id/renamelen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+<!--        app:civ_border_width="1dp"            // 设置边框宽度，默认为0，这样就看不到那个圈了-->
+<!--        app:civ_border_overlay="true"         // 设置边框是否覆盖在图片上，默认为false-->
+<!--        app:civ_border_color="@color/silver"  // 设置边框的颜色，默认为黑色，这里用了一种自定义的颜色——银色-->
+<!--        app:civ_fill_color="@color/whiteSmoke"// 设置填充底色，默认为透明，这里用了自定义的颜色——白烟色-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/head_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/user_name" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/resigner_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_account"
+        android:layout_marginTop="10dp"
+        >
+        <ImageView
+            android:id="@+id/resigner_account_image"
+            android:layout_width="20dp"
+            android:background="@drawable/user_name"
+            android:layout_height="20dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/resigner_account_text"
+            android:layout_toRightOf="@+id/acount_image"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名 :"
+            android:textSize="22dp" />
+
+        <EditText
+            android:id="@+id/resigner_accountEdit"
+            android:layout_toRightOf="@+id/account_text"
+            android:layout_marginLeft="20dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="请输入姓名"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/re_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/resigner_account"
+        >
+        <ImageView
+            android:id="@+id/resigner_password_image"
+            android:layout_width="20dp"
+            android:background="@drawable/password"
+            android:layout_height="20dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/resigner_password_text"
+            android:layout_toRightOf="@+id/acount_image"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密  码:"
+            android:textSize="22dp" />
+
+        <EditText
+            android:id="@+id/resigner_password_Edit"
+            android:layout_toRightOf="@+id/account_text"
+            android:layout_marginLeft="20dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="请输入密码"
+            android:inputType="textPassword" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/resigner_password1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/re_password"
+        >
+        <ImageView
+            android:id="@+id/resigner_password_image1"
+            android:layout_width="20dp"
+            android:background="@drawable/password"
+            android:layout_height="20dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/resigner_password_text1"
+            android:layout_toRightOf="@+id/acount_image"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认密码:"
+            android:textSize="22dp" />
+
+        <EditText
+            android:id="@+id/resigner_password_Edit1"
+            android:layout_toRightOf="@+id/account_text"
+            android:layout_marginLeft="20dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="请再次输入密码"
+            android:inputType="textPassword" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/phone_password1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/resigner_password1"
+        >
+        <ImageView
+            android:id="@+id/phone_image"
+            android:layout_width="20dp"
+            android:background="@drawable/phone_num"
+            android:layout_height="20dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/phone_text"
+            android:layout_toRightOf="@+id/acount_image"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号码:"
+            android:textSize="22dp" />
+
+        <EditText
+            android:id="@+id/phone_Edit"
+            android:layout_toRightOf="@+id/account_text"
+            android:layout_marginLeft="20dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="请输入您的联系方式"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phone_coreln"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/phone_password1"
+        >
+        <ImageView
+            android:id="@+id/core_image"
+            android:layout_width="20dp"
+            android:background="@drawable/core"
+            android:layout_height="20dp"
+            android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/core_edit"
+            android:layout_toRightOf="@+id/core_text"
+            android:layout_marginLeft="20dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint=""
+            android:inputType="number" />
+        <Button
+            android:id="@+id/login_request_code_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:layout_alignRight="@+id/login_input_phone_et"
+            android:layout_alignTop="@+id/login_input_code_et"
+            android:text="获取验证码" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/old"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/phone_coreln"
+        >
+        <ImageView
+            android:id="@+id/old_image"
+            android:layout_width="20dp"
+            android:background="@drawable/old"
+            android:layout_height="20dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/old_text"
+            android:layout_toRightOf="@+id/acount_image"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="年  龄:"
+            android:textSize="22dp" />
+
+        <EditText
+            android:id="@+id/old_Edit"
+            android:layout_toRightOf="@+id/account_text"
+            android:layout_marginLeft="20dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="请输入您的年龄"
+            android:inputType="number" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/old"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/resigner_button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybutton_style"
+            android:text="注册"/>
+    </LinearLayout>
+
+</RelativeLayout>

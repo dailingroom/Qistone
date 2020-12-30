@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:leon="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.mineFragment">
+    <LinearLayout
+        android:background="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/myheadbackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/user_name"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="小飞象"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <com.leon.lib.settingview.LSettingItem
+            android:id="@+id/item_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            leon:leftIcon="@drawable/user_name"
+            leon:leftText="个人信息" />
+
+        <com.leon.lib.settingview.LSettingItem
+            android:id="@+id/collect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            leon:leftIcon="@drawable/user_name"
+            leon:leftText="收藏" />
+
+        <com.leon.lib.settingview.LSettingItem
+            android:id="@+id/Photo_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            leon:leftIcon="@drawable/user_name"
+            leon:leftText="相册"
+            leon:rightStyle="iconHide"/>
+
+        <com.leon.lib.settingview.LSettingItem
+            android:id="@+id/item_five"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            leon:leftIcon="@drawable/user_name"
+            leon:leftText="注销" />
+
+        <com.leon.lib.settingview.LSettingItem
+            android:id="@+id/out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            leon:isShowUnderLine="false"
+            leon:leftIcon="@drawable/user_name"
+            leon:leftText="退出" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
